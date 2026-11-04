@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .element>div:hover { /* ここを修正 */
+            opacity: 0.6;
+        }
+
+        .element>div {
+            position: fixed;
+            color: white;
+            width: 100px;
+            height: 100px;
+        }
+
+        .element1>div {
+            top: 50px;
+            left: 0;
+            background-color: rgb(255, 75, 0, 1);
+            z-index: 2;
+        }
+
+        .element2>div {
+            top: 100px;
+            left: 50px;
+            text-align: end;
+            background-color: rgb(0, 90, 255, 1);
+            z-index: 99;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        対策をしたのでちらつきが起きない（案2）
+    </p>
+    <div class="element element1">
+        <div>
+            要素1(z-index:2)
+        </div>
+    </div>
+    <div class="element element2">
+        <div>
+            要素2(z-index:99)
+        </div>
+    </div>
+</body>
+
+</html>
